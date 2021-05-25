@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<title>ArtisticCV.rst</title>
+<style type="text/css">
+
+html{
+	background-image: url('grid_container_BG.JPG');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	align-content: center;
+	align-items: center;
+	align-self: center;
+	background-color: black;
+}
+
+.footer {
+   position: inherit;
+   border-radius: 1000px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   font-family: "Avenir"
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src:  url('Avenir.ttc') format('truetype');
+}
+
+@font-face {
+  font-family: 'VAZIR';
+  src:  url('Vazir.ttf') format('truetype');
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 90px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: red;
+}
+
+.responsive {
+  width: 250px;
+  height: auto;
+}
+img {
+  border-radius: 1000px;
+  margin-top: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+ul{
+	font-family: "VAZIR";
+	font-size: 20px;
+	padding: 10px:
+}
+
+p{
+	font-family: "VAZIR";
+	font-size: 20px;
+	text-align: justify;
+	margin: 20px;
+}
+
+.item1 { 
+	grid-area: header;
+	border-radius: 90px;
+	font-family: "VAZIR";
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.item2 { 
+	grid-area: Picture;
+	border-radius: 10px;
+	align-content: center;
+	font-family: "VAZIR";
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.item3 { 
+	grid-area: PersonalInfo;
+	border-radius: 10px;
+	font-family: "VAZIR";
+	margin: 20px;
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.item4 { 
+	grid-area: Summery; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 30px;
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.item5 { 
+	grid-area: AboutMe; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.item6 { 
+	grid-area: social; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 30px;
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.item7 { 
+	grid-area: gmail; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.item8 {
+	grid-area: live; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 30px;
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.item9 { 
+	grid-area: des; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'Picture PersonalInfo PersonalInfo PersonalInfo PersonalInfo PersonalInfo'
+    'Summery AboutMe AboutMe AboutMe AboutMe AboutMe'
+    'social gmail gmail gmail gmail gmail'
+    'live des des des des des';
+  grid-gap: 10px;
+/*   background: url(grid_container_BG.JPG); */
+  padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: stretch;
+  text-align: center;
+}
+
+.flex-container > div {
+/*   background-color: #f1f1f1; */
+  margin: 5px;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "VAZIR";
+}
+
+@media (max-width: 800px){
+	a:link, a:visited {
+  		font-size: 12px;
+	}
+}
+
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .grid-container {
+  grid-template-areas:
+    'header'
+    'Picture'
+    'PersonalInfo'
+    'Summery'
+    'AboutMe'
+    'social'
+    'gmail'
+    'live'
+    'des';
+  }
+  img{
+	margin-top: 0px;
+  }
+  html{
+	background-image: url('grid_container_BG.JPG');
+	background-repeat: repeat;
+	background-size: auto;
+  }
+  	a:link, a:visited {
+  		font-size: 12px;
+	}
+}
+@media print {
+    p {
+	    font-size: 10px;
+    }
+    img {
+	    border-radius: 90px;
+    }
+	a:link, a:visited {
+		color: blue;
+		font-size: 10px;
+	}
+	a:hover, a:active {
+		color: purple;
+		font-size: 10px;
+	}
+	html{
+		background-color: white;
+  	}
+  	ul{
+	  	font-size: 8px;
+	}
+	ol{
+		font-size: 8px;
+	}
+	.item4 { 
+		font-size: 15px;
+	}
+	.item6 { 
+		font-size: 15px;
+	}
+	.item8 {
+		font-size: 15px;
+	}
+	.footer {
+		color: black;
+	}
+}
+</style>
+</head>
+<body>
+<div class="item1"><a class="reference external" href="index.html">مشخصات شخصی</a> <a class="reference external" href="AcademicCV.html">مشخصات تحصیلی</a> <a class="reference external" href="ArtisticCV">مشخصات هنری</a></div>
+<div class="item2 h4 section" id="id4">
+<h1>ساز های موسیقیایی</h1>
+<ol class="item3 ol arabic simple">
+<li>پیانو</li>
+<li>تار</li>
+<li>تنبک</li>
+</ol>
+</div>
+<div class="item4 h4 section" id="id5">
+<h1>خوانندگی</h1>
+<ol class="item5 ol arabic simple">
+<li>آواز سنتی ایرانی</li>
+<li>ترانه های پاپ</li>
+<li>ترانه های انگلیسی زبان</li>
+</ol>
+</div>
+<div class="item6 h4 section" id="id6">
+<h1>اجراهای زنده</h1>
+<ol class="item5 ol arabic simple">
+<li>مراسم فارغ التحصیلی دانشجویان مهندسی مکانیک دانشگاه کاشان، تالار همایش آزادی دانشگاه کاشان</li>
+<li>مراسم فارغ التحصیلی دانشجویان مهندسی شیمی دانشگاه کاشان، تالار همایش فیض دانشگاه کاشان</li>
+<li>همایش ازدواج دانشجویی دانشگاه کاشان، تالار همایش آزادی دانشگاه کاشان</li>
+<li>دورهمی کانون موسیقی و تأتر دانشگاه کاشان، تالار همایش علوم انسانی دانشگاه کاشان</li>
+<li>همایش انجمن اسلامی دانشگاه کاشان، تالار همایش فیض دانشگاه کاشان</li>
+<li>مراسم دانشکده روانشناسی دانشگاه کاشان، تالار همایش علوم انسانی دانشگاه کاشان</li>
+<li>دورهمی کانون موسیقی و تأتر دانشگاه کاشان، تالار همایش آزادی دانشگاه کاشان</li>
+</ol>
+<p class="footer">© Made with ❤️ by Ardavan Khalij</p>
+</div>
+</body>
+</html>

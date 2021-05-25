@@ -1,0 +1,47 @@
+.. class:: grid
+
+
+
+`This page is to show code , image and link`
+#####################################################################################################
+.. code-block:: html
+
+    <div class="box1" >
+        <div class="box1_text">
+            <img src="./book1.jpg" alt="books" class="box1_img" >
+            <div class="box1_font" >
+                    
+                <p class="font">عنوان:</p>   
+                <p  class="font">موضوع:</p> 
+                <p  class="font"> تعداد صفحات:</p> 
+                <p  class="font">تاریخ:</p>  
+            </div>
+        </div>
+    </div>
+
+.. class:: img
+
+.. image:: book1.jpg
+
+This |img2| is a book.
+
+.. |img2| image:: book1.jpg
+    :align: middle
+    :width: 12
+
+
+
+
+****my website****
+#####################################################################################################   
+.. class:: website
+
+http://ahmadi1999.freevar.com/
+
+
+
+
+
+
+
+

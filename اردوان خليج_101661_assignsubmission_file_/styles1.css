@@ -1,0 +1,368 @@
+html{
+	background-image: url('grid_container_BG.JPG');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	align-content: center;
+	align-items: center;
+	align-self: center;
+	background-color: black;
+}
+
+.footer {
+   position: inherit;
+   border-radius: 1000px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   font-family: "Avenir"
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src:  url('Avenir.ttc') format('truetype');
+}
+
+@font-face {
+  font-family: 'VAZIR';
+  src:  url('Vazir.ttf') format('truetype');
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 90px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: red;
+}
+
+.responsive {
+  width: 250px;
+  height: auto;
+}
+img {
+  border-radius: 1000px;
+  margin-top: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+ul{
+	font-family: "VAZIR";
+	font-size: 20px;
+	padding: 10px:
+}
+
+p{
+	font-family: "VAZIR";
+	font-size: 20px;
+	text-align: justify;
+	margin: 20px;
+}
+
+.item1 { 
+	grid-area: header;
+	border-radius: 90px;
+	font-family: "VAZIR";
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item2 { 
+	grid-area: Picture;
+	border-radius: 10px;
+	align-content: center;
+	font-family: "VAZIR";
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item3 { 
+	grid-area: PersonalInfo;
+	border-radius: 10px;
+	font-family: "VAZIR";
+	margin: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item4 { 
+	grid-area: Summery; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 30px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item5 { 
+	grid-area: AboutMe; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item6 { 
+	grid-area: social; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 30px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item7 { 
+	grid-area: gmail; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item8 { 
+	grid-area: telegram; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item9 { 
+	grid-area: instagram; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item10 { 
+	grid-area: Twitter; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item11 { 
+	grid-area: youtube; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item12 { 
+	grid-area: testscore; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 30px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+.item13 { 
+	grid-area: IELTS; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    align: center;
+    padding: 20px 0;
+}
+.item14 { 
+	grid-area: GRE; 
+	border-radius: 10px;
+	font-family: "VAZIR";
+	text-align: justify;
+	font-size: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'Picture PersonalInfo PersonalInfo PersonalInfo PersonalInfo PersonalInfo'
+    'Summery AboutMe AboutMe AboutMe AboutMe AboutMe'
+    'social gmail gmail gmail gmail gmail'
+    'social telegram telegram telegram telegram telegram'
+    'social instagram instagram instagram instagram instagram'
+    'social Twitter Twitter Twitter Twitter Twitter'
+    'social youtube youtube youtube youtube youtube'
+    'testscore IELTS IELTS IELTS IELTS IELTS'
+    'testscore GRE GRE GRE GRE GRE';
+  grid-gap: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: stretch;
+  text-align: center;
+  margin: 5px;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "VAZIR";
+}
+
+.flex-container > div {
+  margin: 5px;
+  padding: 20px;
+  font-size: 20px;
+  font-family: "VAZIR";
+}
+
+@media (max-width: 800px){
+	a:link, a:visited {
+  		font-size: 12px;
+	}
+}
+
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .grid-container {
+  grid-template-areas:
+    'header'
+    'Picture'
+    'PersonalInfo'
+    'Summery'
+    'AboutMe'
+    'social'
+    'gmail'
+    'telegram'
+    'instagram'
+    'Twitter'
+    'youtube'
+    'testscore'
+    'IELTS'
+    'GRE';
+  }
+  img{
+	margin-top: 0px;
+  }
+  html{
+	background-image: url('grid_container_BG.JPG');
+	background-repeat: repeat;
+	background-size: auto;
+  }
+  	a:link, a:visited {
+  		font-size: 12px;
+	}
+}
+
+@media print {
+    p {
+	    font-size: 10px;
+    }
+    img {
+	    border-radius: 90px;
+    }
+	a:link, a:visited {
+		color: blue;
+	}
+	a:hover, a:active {
+		color: purple;
+	}
+	html{
+		background-color: white;
+  	}
+  	ul{
+	  	font-size: 10px;
+	  	text-align: left
+	}
+	ol{
+		font-size: 10px;
+		text-align: left
+	}
+	.item6 { 
+		font-size: 30px;
+	}
+	.item7 { 
+		font-size: 15px;
+	}
+	.item8 { 
+		font-size: 15px;
+	}
+	.item9 { 
+		font-size: 15px
+	}
+	.item10 { 
+		font-size: 15px;
+	}
+	.item11 { 
+		font-size: 15px;
+	}
+	.item12 { 
+		font-size: 30px;
+	}
+	.item13 { 
+		font-size: 15px;
+	}
+	.item14 { 
+		font-size: 15px;
+	}
+	.item4 { 
+		font-size: 20px;
+	}
+	.item6 { 
+		font-size: 20px;
+	}
+	.item2 { 
+		font-size: 20px;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-areas:
+		'header header header header header'
+		'Picture PersonalInfo PersonalInfo PersonalInfo PersonalInfo'
+		'Summery AboutMe AboutMe AboutMe AboutMe'
+		'social gmail gmail telegram telegram'
+		'social instagram instagram Twitter Twitter'
+		'social youtube youtube youtube youtube'
+		'testscore IELTS IELTS GRE GRE';
+		grid-gap: 10px;
+		padding: 10px;
+	}
+	.footer {
+		color: black;
+	}
+}

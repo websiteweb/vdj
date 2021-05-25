@@ -1,0 +1,41 @@
+body{
+	direction: ltr;
+    background-image: linear-gradient(to right, #c5b2fae0, #eea722b6);
+}
+pre {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your inline literals (``) are LTR */
+tt {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your interpretted text (`) is LTR */
+cite {direction: ltr; unicode-bidi: embed; }
+.grid{
+
+    display: grid;
+    align-content: center;
+	grid-template-areas: 
+                         'code img';
+}
+pre:nth-of-type(1){
+    /* direction: ltr; */
+    grid-area: code;
+    background-color: rgb(252, 252, 252);
+    width: 600px;
+    padding: 20px;
+    margin: 20px;
+    border: rgb(156, 36, 36) 4px;
+    border-style: solid;
+}    
+.img{
+    grid-area: img;
+    width: 648px;
+    margin: 20px; 
+    border: rgb(31, 30, 30) 4px;
+    border-style: solid;
+}
+
+.website{
+    width: 400px;
+    display: grid;
+    align-content: center;
+    background-color: crimson;
+    font-size: 30px;
+}

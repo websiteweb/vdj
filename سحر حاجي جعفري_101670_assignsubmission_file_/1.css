@@ -1,0 +1,9 @@
+body {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: rgb(225, 236, 248);
+}
+
+.start {
+  text-align: center;
+}

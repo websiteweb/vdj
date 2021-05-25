@@ -1,0 +1,23 @@
+body{
+	direction: rtl;
+	/* display: grid;
+	grid-template-columns: auto auto auto auto; */
+	/* grid-column-gap: 50px;
+	grid-row-gap: 20px; */
+    background-image: linear-gradient(to right, #c5b2fae0, #eea722b6);
+}
+.font{
+    font-size: 30px;
+}
+.table1{
+	background-image: linear-gradient(to right, #c5b2fae0, #22adeeb6);
+    margin: 20px;
+}
+.font_web{
+    font-size: 50px;
+}
+.grid{
+	display: grid;
+	align-content: center;
+	grid-template-columns: auto auto auto auto;
+}

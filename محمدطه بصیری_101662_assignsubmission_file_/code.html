@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="code">
+        <pre data-language="dart"><span class="kd">class</span> <span class="nc">RouteGenerator</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="n">Route</span><span class="o">&lt;</span><span class="kt">dynamic</span><span class="o">&gt;</span> <span class="n">generateRoute</span><span class="p">(</span><span class="n">RouteSettings</span> <span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">final</span> <span class="n">args</span> <span class="o">=</span> <span class="n">settings</span><span class="p">.</span><span class="n">arguments</span><span class="p">;</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">settings</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="s1">&#39;/&#39;</span><span class="o">:</span>
+            <span class="k">return</span> <span class="n">MaterialPageRoute</span><span class="p">(</span>
+                <span class="nl">builder:</span> <span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">MainPage</span><span class="p">(),</span>
+                <span class="p">);</span>
+        <span class="k">default</span><span class="o">:</span>
+            <span class="k">return</span> <span class="n">MaterialPageRoute</span><span class="p">(</span>
+                <span class="nl">builder:</span> <span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">MainPage</span><span class="p">(),</span>
+                <span class="p">);</span>
+<span class="p">}</span></pre>
+    </div>
+</body>
+</html>
