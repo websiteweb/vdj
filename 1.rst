@@ -1,0 +1,698 @@
+##########################
+ReStructuredText
+##########################
+
+.. meta::
+   :http-equiv=Content-Language: fa
+   :description lang=en: An amusing story
+   :description lang=fr: Une histoire amusante
+
+.. |date| date::
+.. |time| date:: %H:%M
+
+.. |FullTime| date:: %Y/%m/%d %H:%M
+
+.. meta::
+   :http-equiv=Content-Language: en
+
+.. topic:: Overview
+
+    ReStructuredText
+
+    :Time: |FullTime|
+    :Author: **Ahmad Yoosofan**
+            `Ahmad Yoosofan <http://yoosofan.github.io/en>`_ `احمد یوسفان <http://yoosofan.github.io>`_
+
+..  section-numbering::
+
+.. role:: python(code)
+   :language: python
+
+.. role:: cpp(code)
+   :language: cpp
+
+
+:Author: Ahmad Yoosofan
+:Contact: yoosofan@myfastmail.com;yoosofan@mail.com;yoosofan@gmail.com
+:Revision: $Revision: 5 $
+:Copyright: Commercial (read only, no change, no copy).
+
+
+.. contents:: فهرست مطالب
+   :depth: 7
+
+first
+####################################################################################################
+این فصل اول است
+
+second
+****************************************************************************************************
+این متن زیر بخش یکم از فصل یکم است
+یبتس
+
+
+یسبیس
+
+third
+====================================================================================================
+سبسی
+سیبسثقفثق
+
+forth
+----------------------------------------------------------------------------------------------------
+یبای
+یبایف
+یبلایب
+
+fifth
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+یبسلیب
+یبلیبل
+
+sixth
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test
+
+فصل۱‍ بخش ۲
+****************************************************************************************************
+قصثفق
+یسقفلثق
+
+
+فصل۱ بخش۲ زیر بخش ۱
+====================================================================================================
+یبلیب
+یبلیب۵۶
+یبلای
+
+
+
+
+install
+####################################################################################################
+.. code:: console
+  
+  $ sudo apt-get install python3-pip
+  $ pip3 install pygments
+  $ pip3 install sphinx --upgrade
+
+Or
+
+.. code:: console
+  
+  sudo apt-get install python3-pip
+  sudo -H pip3 install pygments
+  sudo -H pip3 install sphinx --upgrade
+
+https://pypi.python.org/pypi/rst2html5/
+
+about rst
+#####################
+*   http://docutils.sourceforge.net/docs/ref/rst/directives.html
+*   http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+*   `<http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.txt>`_
+*   http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+*   https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst
+*   https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
+*   http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#citations
+*   `<http://rest-sphinx-memo.readthedocs.org/en/latest/ReST.html>`_
+*   `Markdown and reStructuredText <https://gist.github.com/dupuy/1855764>`_
+*   http://docutils.sourceforge.net/docs/ref/rst/
+*   `another useful resource <http://www.math.uiuc.edu/~gfrancis/illimath/windows/aszgard_mini/movpy-2.0.0-py2.4.4/manuals/docutils/ref/rst/directives.html>`_
+*   `From Python <https://docs.python.org/devguide/documenting.html>`_
+*   `FAQ <http://docutils.sourceforge.net/FAQ.html>`_
+*   `Restructured Text (reST) and Sphinx CheatSheet <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`_
+*   `<http://www.siafoo.net/help/reST>`_
+*   https://build-me-the-docs-please.readthedocs.io/en/latest/index.html
+
+Cheatsheet
+*******************
+https://github.com/ralsina/rst-cheatsheet
+http://github.com/ralsina/rst-cheatsheet/raw/master/rst-cheatsheet.pdf
+
+writing book with rst
+***************************
+https://groups.google.com/forum/#!forum/sphinx-dev
+
+How to run
+**********
+.. code:: console
+  
+  $ rst2html git.txt git.html
+
+
+A simple citation [CIT2002]_
+
+.. _my-reference-label:
+       ابن متن ارجاعی است که دیدیم
+
+
+Editors
+**********************
+Riv
+===========
+*   `<https://github.com/gu-fan/riv.vim>`_
+*   `<https://github.com/gu-fan/rhythm.css>`_
+*   `<https://dev.to/atorin/tables--restructuredtext-1m6n>`_
+*   `<https://github.com/gu-fan/InstantRst`>_
+
+Related Tools
+***************
+pdf
+=========
+https://github.com/rst2pdf/rst2pdf
+https://github.com/rst2pdf/rst2pdf.github.io
+https://rst2pdf.org/
+
+نوشتن فارسی
+####################################################################################################
+فارسی
+***********************
+test sub
+====================================================================================================
+.. class:: ltr
+
+  "default.css" is my CSS but html4css1.css is the default css of rst2html (or sphinx)s
+
+.. code:: console
+
+  rst2html final.932.txt final.932.txt.html --stylesheet=default.css,html4css1.css 
+  rst2html.py reStructuredText.txt reStructuredText.html  --stylesheet=default.css,html4css1.css
+
+
+This is a simple sentence.
+
+.. class:: rtl
+
+نوشتن فارسی
+به فارسی ادامه
+می‌دهیم
+زبان فارسی
+
+.. class:: ltr
+
+`Right To Left <http://docutils.sourceforge.net/FAQ.html#can-i-produce-documents-in-right-to-left-languages>`_
+
+--------
+
+For install, see `my-reference-label`_.
+
+How can I sure this name a_b_c will work correctly.
+
+Git `configuration <scm/git/git.html#configuraton>`_
+
+------
+
+.. math::
+
+    n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
+
+
++------------------------+------------+----------+----------+
+| Header row, column 1   | Header 2   | Header 3 | Header 4 |
+| (header rows optional) |            |          |          |
++========================+============+==========+==========+
+| body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+| body row 2             | Cells may span columns.          |
++------------------------+------------+---------------------+
+| body row 3             | Cells may  | - Table cells       |
++------------------------+ span rows. | - contain           |
+| body row 4             |            | - body elements.    |
++------------------------+------------+---------------------+
+
+
+
++-------+---------+
+|   A grid table  |
++-------+---------+
+| Col 1 | Col 2   |
++=======+=========+
+|       |         |
++-------+---------+
+|       |         |
++-------+---------+
+
+
+.. table:: Truth table for "not"
+   :widths: auto
+
+   =====  =====
+     A    not A
+   =====  =====
+   False  True
+   True   False
+   =====  =====
+
+.. csv-table:: Frozen Delights!
+   :header: "Treat", "Quantity", "Description"
+   :widths: 15, 10, 30
+
+   "Albatross", 2.99, "On a stick!"
+   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+   crunchy, now would it?"
+   "Gannet Ripple", 133.99, "On a stick!"
+
+.. list-table:: Frozen Delights!
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!
+
+
+.. list-table:: فهرست کارهای انجام شده برای پشتیبانی
+   :header-rows: 1
+   :widths: 10 20 20
+   :class: tableheaderwithgraybackground
+
+   * - تاریخ
+     - مشکل
+     - توضیح
+   * - ۱۳۹۹/۷/۶
+     - اعمال داده هاي جديد كاليبراسيون مخازن در نرم افزار کنترل تولید
+     - داده های جدید اعمال گردیده و در نرم افزار در حال استفاده می‌باشد
+   * - ۱۳۹۹/۸/۳
+     - رفع اشكال از گزارش توليد روزانه در نرم افزار كنترل توليد
+     - پس از تغییرات کلی در گزارش دیگر درست شد.
+   * - ۱۳۹۹/۸/۲۹
+     - خوانده نشدن داده‌های DCS
+     - مشکل بررسی و برطرف شد
+   * - ۱۳۹۹/۹/۷
+     - خوانده نشدن داده‌های DCS
+     - مشکل بررسی و برطرف شد
+   * - ۱۳۹۹/۹/۱۴
+     - خوانده نشدن داده‌های DCS
+     - مشکل بررسی و برطرف شد
+
+
+
+nested list
+***********
+`<http://stackoverflow.com/questions/5550089/how-to-create-a-nested-list-in-restructuredtext>`_
+
+Make sure the nested list is indented to the same level as the text of the parent list, like this:
+
+1.  جایگزینی internal_work_order_statement (انجام شد ولی باید work_order_tag_list_id نیز در جاهای مختلف حذف شود)
+#.  معین کردن state مربوط به work_order_state و کلیه state ها 
+#.  باید صفر تا صد تمامی کارها state بندی شده و دستورات insert مربوطه را بنویسیم
+#.  جدولهای پایه که باید پر کنیم تا روال کار را در نرم افزار مدیریت نمائیم:
+
+    a.  proposed_work_request_base_state
+    #.  pm_base_type
+    #.  work_request_base_state
+    #.  work_request_base_type
+    #.  work_order_base_type
+    #.  work_order_state_base_state
+    #.  alarm_base_type (هنوز جدول درست نشده است)
+    #.  log_action (کار آینده)
+    #.  جدولهای پایه که باید اجازه بدهیم کاربر data entry نماید
+    #.  activity_fault_base_list
+    #.  activity_fault_reason_base_list
+    #.  activity_action_base_list
+
+#.  روی انتقال از PM به work_request نیز بهتر است بصورت جدولی کار کنیم
+#.  بر روی این تمرکز شود که تمامی انتقالها از طریق یک جدول انجام شود (بعضی از این موارد از طریق فیلدی درون
+    یک جدول و بعضی از طریق یک state از یک جدول تعریف شده اند (مواردی چون work_request_generated را حذف نمائیم))
+#.  معین کردن alarm مربوط به کلیه state ها و کلیه flow ها از جمله درخواست کار، حکم کار، pm و ...
+#.  حق دسترسی ها را نیز باید مد نظر داشته باشیم
+
+
+
+http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#hyperlink-targets
+
+Anonymous Hyperlinks
+
+The World Wide Web Consortium recommends in its HTML Techniques for Web Content Accessibility Guidelines that authors should "clearly identify the target of each link." Hyperlink references should be as verbose as possible, but duplicating a verbose hyperlink name in the target is onerous and error-prone. Anonymous hyperlinks are designed to allow convenient verbose hyperlink references, and are analogous to Auto-Numbered Footnotes. They are particularly useful in short or one-off documents. However, this feature is easily abused and can result in unreadable plaintext and/or unmaintainable documents. Caution is advised.
+
+Anonymous hyperlink references are specified with two underscores instead of one:
+
+See `the web site of my favorite programming language`__ .
+
+Anonymous targets begin with ".. __:"; no reference name is required or allowed:
+
+.. __: http://www.python.org
+
+As a convenient alternative, anonymous targets may begin with "__" only:
+
+       "__ http://www.learnpython.org/"
+
+The reference name of the reference is not used to match the reference to its target. Instead, the order of anonymous hyperlink references and targets within the document is significant: the first anonymous reference will link to the first anonymous target. The number of anonymous hyperlink references in a document must match the number of anonymous targets. For readability, it is recommended that targets be kept close to references. Take care when editing text containing anonymous references; adding, removing, and rearranging references require attention to the order of corresponding targets.
+
+The followin lines have error if I put space after  >  and before  `
+
+*  Prepare paper for Izadi work on database
+   `Computer Languages, Systems & Structures 
+   <http://www.sciencedirect.com/science/journal/14778424>`_
+
+*  Prepare article in nano in the following journals :
+*  next Item
+
+So we must delete extra space at the end of a link
+
+
+The error happens because the rst format seems to require a line of spacing before and after a bulleted list. The following input parses and produces the same input for both implementations:
+
+
+https://github.com/nim-lang/Nim/issues/689
+
+
+
+* One
+
+  * A
+  * `Some split hyperlink
+    <http://foo>`_
+
+  * B
+
+* Two
+
+  * A
+  * B
+
+Not sure if Nimrod should report this, but the error of the python version also confused github's ruby rendering engine. Maybe nimrod should get a --strict switch to catch these?
+    
+
+I found this method working
+
+First, you have the role.
+
+.. role:: red
+
+An example of using :red:`interpreted text`
+
+It translates into as follows.
+
+<p>An example of using <span class="red">interpreted text</span></p>
+
+Now, you have the red class, you can use CSS for changing colors.
+
+.. comment:
+
+    .red {
+        color:red;
+    }
+
+`How to use color in text with ReStructured Text (rst2html.py) or how to insert HTML tags without blank lines? <http://stackoverflow.com/questions/4669689/how-to-use-color-in-text-with-restructured-text-rst2html-py-or-how-to-insert-h/4669850#4669850>`_
+
+
+.. class:: ltr
+   :align: center
+
+  === === ===
+  sno pno qty
+  === === ===
+  S1  P1  300
+  S1  P2  200
+  S1  P3  400
+  S1  P4  200
+  S1  P5  100
+  S1  P6  100
+  S2  P1  300
+  S2  P2  400
+  S3  P2  200
+  S4  P2  200
+  S4  P4  300
+  S4  P5  400
+  === === ===
+
+
+
+
+.. csv-table:: بخش selector از قطعه بندی
+   :header: `segment number`, `GDT or LDT`, `protection`
+   :class: ltr
+   
+    13, 1, 2
+
+
+..  csv-table:: جدول فاکتور - خریدار
+    :header: `شماره فاکتور فروش`_,`نام خریدار`_, نشانی خریدار,دیگر اطلاعات خریدار
+
+    1,Ali,Street1,other
+    4,Kamran,street2,other
+    5,Hamid,street3,other
+    2,Koroush,street1,other
+    4,Kamran,street2,other
+    5,Hamid,street3,other
+    3,Reza,street2,other
+
+..  _شماره جنس:  #  dfgdfgdf
+
+..  _شماره فاکتور فروش: #
+
+..  _نام خریدار: #
+
+..  _شماره دانشجویی: #
+
+..  _رشته: #
+
+..  _استاد راهنما: #
+
+
+
+*  t\ :sub:`t` : زمان دسترسی به حافظه‌ی نهان جدول صفحه 
+*  t\ :sub:`c` : زمان دسترستی به حافظه‌ی نهان
+*  t\ :sub:`m` : زمان دسترسی به حافظه‌ی اصلی
+*  h\ :sub:`T` : ضریب اصابت به حافظه‌ی نهان جدول صفحه
+*  h\ :sub:`c` : ضریب اصابت به حافظه‌ی نهان
+
+.. math::
+  :class: ltr
+  
+  EAT = table +  memory 
+
+  table =  h_t * t_t + ( 1 - h_t ) * ( t_t + t_m )
+
+  memory = h_c * t_c + ( 1 - h_c ) * ( t_m + t_c ) 
+    
+با فرض برابر بودن نسبت‌های اصابت و زمان‌های یکسان برای دسترسی به حافظهٔ نهان  و حافظهٔ TLB خواهیم داشت
+
+.. math::
+  :class: ltr
+    
+  EAT = 2* (h * t_c + ( 1 - h ) * ( t_c + t_m ))
+
+
+.. container:: ltr
+
+    left to right text in a container
+
+    .. image:: picture.jpeg
+       :height: 100px
+       :width: 200 px
+       :scale: 50 %
+       :alt: alternate text
+       :align: right
+
+    .. figure:: picture.png
+       :scale: 50 %
+       :alt: map to buried treasure
+
+       This is the caption of the figure (a simple paragraph).
+
+       The legend consists of all elements after the caption.  In this
+       case, the legend consists of this paragraph and the following
+       table:
+
+       +-----------------------+-----------------------+
+       | Symbol                | Meaning               |
+       +=======================+=======================+
+       | .. image:: tent.png   | Campground            |
+       +-----------------------+-----------------------+
+       | .. image:: waves.png  | Lake                  |
+       +-----------------------+-----------------------+
+       | .. image:: peak.png   | Mountain              |
+       +-----------------------+-----------------------+
+
+
+.. |nbsp| unicode:: 0xA0 
+   :trim:
+   
+..  csv-table:: SJF (SPN)
+  :header: |nbsp| |nbsp| P1 , |nbsp| |nbsp| P2, |nbsp| |nbsp| |nbsp| P4, |nbsp| |nbsp| |nbsp| P3 , |nbsp| |nbsp| |nbsp| P2 , 
+  :widths: 10, 25 , 20, 30 , 35 , 5
+  :class: ltr 
+
+  0  ,  2 , 7  , 11 , 17 , 24
+        
+.. math:: 
+  :class: ltr
+
+  Average Waiting Time = \frac{2+0+(7-2)+(11-4)+(7-5)}{5} = \frac{2+15+7+2}{5} = \frac{26}{5} = 5.2
+
+..  csv-table:: SRT
+  :header: |nbsp| |nbsp| P1 , |nbsp| |nbsp| P2, |nbsp| |nbsp| |nbsp| P4, |nbsp| |nbsp| |nbsp| P3 , |nbsp| |nbsp| |nbsp| P2 , 
+  :widths: 10, 25 , 20, 30 , 35 , 5
+  :class: ltr
+
+  0  ,  2 , 7  , 11 , 17 , 24
+  
+.. math:: 
+  :class: ltr
+
+  Average Waiting Time = \frac{2+0+(7-2)+(11-4)+(7-5)}{5} = \frac{2+15+7+2}{5} = \frac{26}{5} = 5.2
+  
+..  csv-table:: HRRN
+  :header: |nbsp| |nbsp| P1 , |nbsp| |nbsp| P0, |nbsp| |nbsp| |nbsp| P2, |nbsp| |nbsp| |nbsp| P4 , |nbsp| |nbsp| |nbsp| P3 , 
+  :widths: 10, 25 , 35, 20 , 30 , 5
+  :class: ltr
+
+  0  ,  2 , 7  , 14 , 18 , 24
+  
+.. math:: 
+  :class: ltr
+  
+  Average Waiting Time = \frac{2+0+(7-2)+(18-4)+(14-5)}{5} = \frac{30}{5} = 6
+
+..  csv-table:: Absolute Priority
+  :header: |nbsp| |nbsp| P0 , |nbsp| |nbsp| P2, |nbsp| |nbsp| |nbsp| P3, |nbsp| |nbsp| |nbsp| P2 , |nbsp| |nbsp| |nbsp| P0 , |nbsp| |nbsp| P1 , |nbsp| |nbsp| P4 , 
+  :widths: 10, 10 , 30 , 25, 15 , 10 , 20 , 5
+  :class: ltr
+
+  0  ,  2 , 4  , 10 , 15 , 18 , 20 , 24
+  
+.. math:: 
+  :class: ltr
+
+  Average Waiting Time = \frac{15+18+(10-2)+0+(20-5)}{5} = \frac{56}{5}
+
+..  csv-table:: Relative Priority
+  :header: |nbsp| |nbsp| P0 , |nbsp| |nbsp| P3, |nbsp| |nbsp| |nbsp| P2, |nbsp| |nbsp| |nbsp| P1 , |nbsp| |nbsp| |nbsp| P4 , 
+  :widths: 25, 30 , 35 , 10 , 20 , 5
+  :class: ltr
+
+  0 , 5  ,  11 , 18  , 20 , 24 
+  
+.. math:: 
+  :class: ltr
+
+  Average Waiting Time = \frac{0+18+(11-2)+(5-4)+(20-5)}{5} = \frac{43}{5}
+
+
+
+.. class:: ltr
+
+  +-----------------+----------------------------+-----------+-----------+
+  |   P0            | P1 |nbsp| |nbsp| |nbsp|    |    P2                 |
+  +=================+============================+===========+===========+
+  | 0               | 1                          | 4         | 6         |
+  +-----------------+----------------------------+-----------+-----------+
+
+.. |producer| image:: ../../../../tools/kashanu.png
+
+.. |consumer| image:: ../../../../tools/kashanu.png
+
+
++------------+------------+
+| |producer| | |consumer| |
++------------+------------+
+
+
+`<http://docutils.sourceforge.net/docs/ref/rst/directives.html#role>`_
+
+.. container:: ltr
+
+    test :code:`import os; int(2)` test2
+    
+    test :python:`import os;` test2
+    
+    using cpp :cpp:`int i=1;` next sentence.
+
+
+next 
+
+.. class:: ltr
+
+    *   `<https://raw.githubusercontent.com/scipy-lectures/scipy-lecture-notes/master/intro/numpy/array_object.rst>`_
+    *   `<https://github.com/scipy-lectures/scipy-lecture-notes/blob/master/intro/numpy/array_object.rst>`_
+
+.. container:: ltr
+
+    :Complex:
+
+      .. sourcecode:: pycon
+
+            >>> d = np.array([1+2j, 3+4j, 5+6*1j])
+            >>> d.dtype
+            dtype('complex128')
+
+    :Bool:
+
+      .. sourcecode:: pycon
+
+            >>> e = np.array([True, False, False, True])
+            >>> e.dtype
+            dtype('bool')
+
+    :Strings:
+
+      .. sourcecode:: pycon
+
+            >>> f = np.array(['Bonjour', 'Hello', 'Hallo',])
+            >>> f.dtype     # <--- strings containing max. 7 letters  # doctest: +SKIP
+            dtype('S7')
+
+    :Much more:
+
+        * ``int32``
+        * ``int64``
+        * ``uint32``
+        * ``uint64``
+
+
+    https://docutils.readthedocs.io/en/sphinx-docs/user/tools.html
+
+    Now open the “test.html” file in your favorite browser to see the results. To get a footer with a link to the source file, date & time of processing, and links to the Docutils project, add some options:
+
+    rst2html.py -stg test.txt test.html
+
+.. [CIT2002] A citation
+          (as به این شکل می‌توانیم متن ارجاع را بنویسیم often used in journals).
+
+
+.. comments:
+
+    rst2html reStructuredText.rst reStructuredText.html --stylesheet=farsi.css,html4css1.css
+    rst2html reStructuredText.rst reStructuredText.html --stylesheet=farsi.css,html4css1.css -stg
+
+
+    .. toctree::
+       :caption: Table of Contents
+       :name: mastertoc
+
+        file1
+        file2
+
+    .. literalinclude:: filename
+        :linenos:
+        :language: python
+        :lines: 1, 3-5
+        :start-after: 3
+        :end-before: 5
+    
+
+
+
+Make sure the nested list is indented to the same level as the text of the parent list (or three characters, whichever is greater), like this:
+
+1. X
+
+   a. U
+   b. V
+   c. W
+
+2. Y
+3. Z

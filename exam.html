@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>ReStructuredText</title>
+<meta content="fa" http-equiv="Content-Language" />
+<meta content="An amusing story" lang="en" name="description" />
+<meta content="Une histoire amusante" lang="fr" name="description" />
+<meta content="en" http-equiv="Content-Language" />
+<style type="text/css">
+
+/* Use these two if the main document direction is RTL */
+body { direction: rtl; }
+div.sidebar { float: left !important; }
+
+/* The next 3 rules are very useful in documents containing pieces
+of code in english */
+/* Use this if you all your literal blocks (::) are LTR */
+pre {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your inline literals (``) are LTR */
+tt {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your interpretted text (`) is LTR */
+cite {direction: ltr; unicode-bidi: embed; }
+
+/* Allow manual direction override by class directive and roles */
+.rtl { direction: rtl; }
+.ltr { direction: ltr; }
+
+</style>
+<style type="text/css">
+
+/* Use these two if the main document direction is RTL */
+body { direction: rtl; text-align:justify;    font-family:'Nazli', Geneva, sans-serif; font-size: 1.1em;}
+div.sidebar { float: left !important; }
+
+/* The next 3 rules are very useful in documents containing pieces
+of code in english */
+/* Use this if you all your literal blocks (::) are LTR */
+pre {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your inline literals (``) are LTR */
+tt {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your interpretted text (`) is LTR */
+cite {direction: ltr; unicode-bidi: embed; }
+
+/* Allow manual direction override by class directive and roles */
+.rtl { direction: rtl; }
+.ltr { direction: ltr; }
+.center {text-align: center;}
+/*.center {display: block; text-align: center;    margin-left: auto; margin-right: auto;}*/
+.toc-backref {     font-size: 1em;}
+.section h1{    font-size: 1.3em;}
+.section h2{    font-size: 1.3em;}
+ol {padding:8px; margin: 8px;}
+ol > li {padding:0; margin: 0; list-style-type: persian;}
+.forgroundcolorred {color: red;}
+
+.tableheaderwithgraybackground th {
+    /*border: 1px solid black;*/
+    font-weight: bold;
+    background-color: #BFBFBF;
+}
+
+</style>
+<style type="text/css">
+
+/* Use these two if the main document direction is RTL */
+
+body { direction: rtl; text-align:justify;    font-family:'Nazli', Geneva, sans-serif; font-size: 1.5em;}
+div.sidebar { float: left !important; }
+
+/* The next 3 rules are very useful in documents containing pieces
+of code in english */
+/* Use this if you all your literal blocks (::) are LTR */
+pre {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your inline literals (``) are LTR */
+tt {direction: ltr; unicode-bidi: embed; }
+/* Use this if you all your interpretted text (`) is LTR */
+cite {direction: ltr; unicode-bidi: embed; }
+
+/* Allow manual direction override by class directive and roles */
+.rtl { direction: rtl; }
+.ltr { direction: ltr; }
+.center {text-align: center;}
+/*.center {display: block; text-align: center;    margin-left: auto; margin-right: auto;}*/
+.toc-backref {     font-size: 1.4em;}
+.section h1{    font-size: 1.7em;}
+.section h2{    font-size: 1.7em;}
+ol {padding:8px; margin: 8px;}
+ol > li {padding:0; margin: 0; list-style-type: persian;}
+
+</style>
+<style type="text/css">
+
+/*
+*   math2html: convert LaTeX equations to HTML output.
+*
+*   Copyright (C) 2009,2010 Alex Fernández
+*
+*   Released under the terms of the `2-Clause BSD license'_, in short:
+*   Copying and distribution of this file, with or without modification,
+*   are permitted in any medium without royalty provided the copyright
+*   notice and this notice are preserved.
+*   This file is offered as-is, without any warranty.
+*
+* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
+*
+*   Based on eLyXer: convert LyX source files to HTML output.
+*   http://elyxer.nongnu.org/
+*/
+/* --end--
+* CSS file for LaTeX formulas.
+*/
+
+/* Formulas */
+.formula {
+	text-align: center;
+	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+	margin: 1.2em 0;
+}
+span.formula {
+	white-space: nowrap;
+}
+div.formula {
+	padding: 0.5ex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Basic features */
+a.eqnumber {
+	display: inline-block;
+	float: right;
+	clear: right;
+	font-weight: bold;
+}
+span.unknown {
+	color: #800000;
+}
+span.ignored, span.arraydef {
+	display: none;
+}
+.formula i {
+	letter-spacing: 0.1ex;
+}
+
+/* Alignment */
+.align-left, .align-l {
+	text-align: left;
+}
+.align-right, .align-r {
+	text-align: right;
+}
+.align-center, .align-c {
+	text-align: center;
+}
+
+/* Structures */
+span.overline, span.bar {
+	text-decoration: overline;
+}
+.fraction, .fullfraction {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.fraction .fraction {
+	font-size: 80%;
+	line-height: 100%;
+}
+span.numerator {
+	display: block;
+}
+span.denominator {
+	display: block;
+	padding: 0ex;
+	border-top: thin solid;
+}
+sup.numerator, sup.unit {
+	font-size: 70%;
+	vertical-align: 80%;
+}
+sub.denominator, sub.unit {
+	font-size: 70%;
+	vertical-align: -20%;
+}
+span.sqrt {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.1ex;
+}
+sup.root {
+	font-size: 70%;
+	position: relative;
+	left: 1.4ex;
+}
+span.radical {
+	display: inline-block;
+	padding: 0ex;
+	font-size: 150%;
+	vertical-align: top;
+}
+span.root {
+	display: inline-block;
+	border-top: thin solid;
+	padding: 0ex;
+	vertical-align: middle;
+}
+span.symbol {
+	line-height: 125%;
+	font-size: 125%;
+}
+span.bigsymbol {
+	line-height: 150%;
+	font-size: 150%;
+}
+span.largesymbol {
+	font-size: 175%;
+}
+span.hugesymbol {
+	font-size: 200%;
+}
+span.scripts {
+	display: inline-table;
+	vertical-align: middle;
+}
+.script {
+	display: table-row;
+	text-align: left;
+	line-height: 150%;
+}
+span.limits {
+	display: inline-table;
+	vertical-align: middle;
+}
+.limit {
+	display: table-row;
+	line-height: 99%;
+}
+sup.limit, sub.limit {
+	line-height: 100%;
+}
+span.symbolover {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 100%;
+	bottom: 0.5em;
+	width: 0px;
+}
+span.withsymbol {
+	display: inline-block;
+}
+span.symbolunder {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 80%;
+	top: 0.3em;
+	width: 0px;
+}
+
+/* Environments */
+span.array, span.bracketcases, span.binomial, span.environment {
+	display: inline-table;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0em;
+	vertical-align: middle;
+}
+span.arrayrow, span.binomrow {
+	display: table-row;
+	padding: 0ex;
+	border: 0ex;
+}
+span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
+	display: table-cell;
+	padding: 0ex 0.2ex;
+	line-height: 99%;
+	border: 0ex;
+}
+/*
+* CSS file for LaTeX formulas, extra stuff:
+* binomials, vertical braces, stackrel, fonts and colors.
+*/
+
+/* Inline binomials */
+span.binom {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 80%;
+}
+span.binomstack {
+	display: block;
+	padding: 0em;
+}
+
+/* Over- and underbraces */
+span.overbrace {
+	border-top: 2pt solid;
+}
+span.underbrace {
+	border-bottom: 2pt solid;
+}
+
+/* Stackrel */
+span.stackrel {
+	display: inline-block;
+	text-align: center;
+}
+span.upstackrel {
+	display: block;
+	padding: 0em;
+	font-size: 80%;
+	line-height: 64%;
+	position: relative;
+	top: 0.15em;
+
+}
+span.downstackrel {
+	display: block;
+	vertical-align: bottom;
+	padding: 0em;
+}
+
+/* Fonts */
+span.mathsf, span.textsf {
+	font-style: normal;
+	font-family: sans-serif;
+}
+span.mathrm, span.textrm {
+	font-style: normal;
+	font-family: serif;
+}
+span.text, span.textnormal {
+	font-style: normal;
+}
+span.textipa {
+	color: #008080;
+}
+span.fraktur {
+	font-family: "Lucida Blackletter", eufm10, blackletter;
+}
+span.blackboard {
+	font-family: Blackboard, msbm10, serif;
+}
+span.scriptfont {
+	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+	font-style: italic;
+}
+
+/* Colors */
+span.colorbox {
+	display: inline-block;
+	padding: 5px;
+}
+span.fbox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 2px;
+}
+span.boxed, span.framebox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 5px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="document" id="restructuredtext">
+<h1 class="title">ReStructuredText</h1>
+
+<div class="topic">
+<p class="topic-title">Overview</p>
+<p>ReStructuredText</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Time:</th><td class="field-body">2021/05/18 16:51</td>
+</tr>
+<tr class="field"><th class="field-name">Author:</th><td class="field-body"><strong>Ahmad Yoosofan</strong>
+<a class="reference external" href="http://yoosofan.github.io/en">Ahmad Yoosofan</a> <a class="reference external" href="http://yoosofan.github.io">احمد یوسفان</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Author:</th><td class="field-body">Ahmad Yoosofan</td>
+</tr>
+<tr class="field"><th class="field-name">Contact:</th><td class="field-body"><a class="reference external" href="mailto:yoosofan&#64;myfastmail.com">yoosofan&#64;myfastmail.com</a>;yoosofan&#64;mail.com;yoosofan&#64;gmail.com</td>
+</tr>
+<tr class="field"><th class="field-name">Revision:</th><td class="field-body">$Revision: 5 $</td>
+</tr>
+<tr class="field"><th class="field-name">Copyright:</th><td class="field-body">Commercial (read only, no change, no copy).</td>
+</tr>
+</tbody>
+</table>
+<div class="contents topic" id="id2">
+<p class="topic-title">فهرست مطالب</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#first" id="id15">1&nbsp;&nbsp;&nbsp;first</a><ul class="auto-toc">
+<li><a class="reference internal" href="#second" id="id16">1.1&nbsp;&nbsp;&nbsp;second</a><ul class="auto-toc">
+<li><a class="reference internal" href="#third" id="id17">1.1.1&nbsp;&nbsp;&nbsp;third</a><ul class="auto-toc">
+<li><a class="reference internal" href="#forth" id="id18">1.1.1.1&nbsp;&nbsp;&nbsp;forth</a><ul class="auto-toc">
+<li><a class="reference internal" href="#fifth" id="id19">1.1.1.1.1&nbsp;&nbsp;&nbsp;fifth</a><ul class="auto-toc">
+<li><a class="reference internal" href="#sixth" id="id20">1.1.1.1.1.1&nbsp;&nbsp;&nbsp;sixth</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id3" id="id21">1.2&nbsp;&nbsp;&nbsp;فصل۱‍ بخش ۲</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id4" id="id22">1.2.1&nbsp;&nbsp;&nbsp;فصل۱ بخش۲ زیر بخش ۱</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install" id="id23">2&nbsp;&nbsp;&nbsp;install</a></li>
+<li><a class="reference internal" href="#about-rst" id="id24">3&nbsp;&nbsp;&nbsp;about rst</a><ul class="auto-toc">
+<li><a class="reference internal" href="#cheatsheet" id="id25">3.1&nbsp;&nbsp;&nbsp;Cheatsheet</a></li>
+<li><a class="reference internal" href="#writing-book-with-rst" id="id26">3.2&nbsp;&nbsp;&nbsp;writing book with rst</a></li>
+<li><a class="reference internal" href="#how-to-run" id="id27">3.3&nbsp;&nbsp;&nbsp;How to run</a></li>
+<li><a class="reference internal" href="#editors" id="id28">3.4&nbsp;&nbsp;&nbsp;Editors</a><ul class="auto-toc">
+<li><a class="reference internal" href="#riv" id="id29">3.4.1&nbsp;&nbsp;&nbsp;Riv</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#related-tools" id="id30">3.5&nbsp;&nbsp;&nbsp;Related Tools</a><ul class="auto-toc">
+<li><a class="reference internal" href="#pdf" id="id31">3.5.1&nbsp;&nbsp;&nbsp;pdf</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6" id="id32">4&nbsp;&nbsp;&nbsp;نوشتن فارسی</a><ul class="auto-toc">
+<li><a class="reference internal" href="#id7" id="id33">4.1&nbsp;&nbsp;&nbsp;فارسی</a><ul class="auto-toc">
+<li><a class="reference internal" href="#test-sub" id="id34">4.1.1&nbsp;&nbsp;&nbsp;test sub</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nested-list" id="id35">4.2&nbsp;&nbsp;&nbsp;nested list</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="first">
+<h1><a class="toc-backref" href="#id15">1&nbsp;&nbsp;&nbsp;first</a></h1>
+<p>این فصل اول است</p>
+<div class="section" id="second">
+<h2><a class="toc-backref" href="#id16">1.1&nbsp;&nbsp;&nbsp;second</a></h2>
+<p>این متن زیر بخش یکم از فصل یکم است
+یبتس</p>
+<p>یسبیس</p>
+<div class="section" id="third">
+<h3><a class="toc-backref" href="#id17">1.1.1&nbsp;&nbsp;&nbsp;third</a></h3>
+<p>سبسی
+سیبسثقفثق</p>
+<div class="section" id="forth">
+<h4><a class="toc-backref" href="#id18">1.1.1.1&nbsp;&nbsp;&nbsp;forth</a></h4>
+<p>یبای
+یبایف
+یبلایب</p>
+<div class="section" id="fifth">
+<h5><a class="toc-backref" href="#id19">1.1.1.1.1&nbsp;&nbsp;&nbsp;fifth</a></h5>
+<p>یبسلیب
+یبلیبل</p>
+<div class="section" id="sixth">
+<h6><a class="toc-backref" href="#id20">1.1.1.1.1.1&nbsp;&nbsp;&nbsp;sixth</a></h6>
+<p>test</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id21">1.2&nbsp;&nbsp;&nbsp;فصل۱‍ بخش ۲</a></h2>
+<p>قصثفق
+یسقفلثق</p>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id22">1.2.1&nbsp;&nbsp;&nbsp;فصل۱ بخش۲ زیر بخش ۱</a></h3>
+<p>یبلیب
+یبلیب۵۶
+یبلای</p>
+</div>
+</div>
+</div>
+<div class="section" id="install">
+<h1><a class="toc-backref" href="#id23">2&nbsp;&nbsp;&nbsp;install</a></h1>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> sudo apt-get install python3-pip
+<span class="generic prompt">$</span> pip3 install pygments
+<span class="generic prompt">$</span> pip3 install sphinx --upgrade
+</pre>
+<p>Or</p>
+<pre class="code console literal-block">
+<span class="generic output">sudo apt-get install python3-pip
+sudo -H pip3 install pygments
+sudo -H pip3 install sphinx --upgrade</span>
+</pre>
+<p><a class="reference external" href="https://pypi.python.org/pypi/rst2html5/">https://pypi.python.org/pypi/rst2html5/</a></p>
+</div>
+<div class="section" id="about-rst">
+<h1><a class="toc-backref" href="#id24">3&nbsp;&nbsp;&nbsp;about rst</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">http://docutils.sourceforge.net/docs/ref/rst/directives.html</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.txt">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.txt</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html</a></li>
+<li><a class="reference external" href="https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst">https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst</a></li>
+<li><a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html">https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html</a></li>
+<li><a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#citations">http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#citations</a></li>
+<li><a class="reference external" href="http://rest-sphinx-memo.readthedocs.org/en/latest/ReST.html">http://rest-sphinx-memo.readthedocs.org/en/latest/ReST.html</a></li>
+<li><a class="reference external" href="https://gist.github.com/dupuy/1855764">Markdown and reStructuredText</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/">http://docutils.sourceforge.net/docs/ref/rst/</a></li>
+<li><a class="reference external" href="http://www.math.uiuc.edu/~gfrancis/illimath/windows/aszgard_mini/movpy-2.0.0-py2.4.4/manuals/docutils/ref/rst/directives.html">another useful resource</a></li>
+<li><a class="reference external" href="https://docs.python.org/devguide/documenting.html">From Python</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/FAQ.html">FAQ</a></li>
+<li><a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html">Restructured Text (reST) and Sphinx CheatSheet</a></li>
+<li><a class="reference external" href="http://www.siafoo.net/help/reST">http://www.siafoo.net/help/reST</a></li>
+<li><a class="reference external" href="https://build-me-the-docs-please.readthedocs.io/en/latest/index.html">https://build-me-the-docs-please.readthedocs.io/en/latest/index.html</a></li>
+</ul>
+<div class="section" id="cheatsheet">
+<h2><a class="toc-backref" href="#id25">3.1&nbsp;&nbsp;&nbsp;Cheatsheet</a></h2>
+<p><a class="reference external" href="https://github.com/ralsina/rst-cheatsheet">https://github.com/ralsina/rst-cheatsheet</a>
+<a class="reference external" href="http://github.com/ralsina/rst-cheatsheet/raw/master/rst-cheatsheet.pdf">http://github.com/ralsina/rst-cheatsheet/raw/master/rst-cheatsheet.pdf</a></p>
+</div>
+<div class="section" id="writing-book-with-rst">
+<h2><a class="toc-backref" href="#id26">3.2&nbsp;&nbsp;&nbsp;writing book with rst</a></h2>
+<p><a class="reference external" href="https://groups.google.com/forum/#!forum/sphinx-dev">https://groups.google.com/forum/#!forum/sphinx-dev</a></p>
+</div>
+<div class="section" id="how-to-run">
+<h2><a class="toc-backref" href="#id27">3.3&nbsp;&nbsp;&nbsp;How to run</a></h2>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> rst2html git.txt git.html
+</pre>
+<p>A simple citation <a class="citation-reference" href="#cit2002" id="id5">[CIT2002]</a></p>
+</div>
+<div class="section" id="editors">
+<h2><a class="toc-backref" href="#id28">3.4&nbsp;&nbsp;&nbsp;Editors</a></h2>
+<div class="section" id="riv">
+<h3><a class="toc-backref" href="#id29">3.4.1&nbsp;&nbsp;&nbsp;Riv</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/gu-fan/riv.vim">https://github.com/gu-fan/riv.vim</a></li>
+<li><a class="reference external" href="https://github.com/gu-fan/rhythm.css">https://github.com/gu-fan/rhythm.css</a></li>
+<li><a class="reference external" href="https://dev.to/atorin/tables--restructuredtext-1m6n">https://dev.to/atorin/tables--restructuredtext-1m6n</a></li>
+<li><cite>&lt;https://github.com/gu-fan/InstantRst</cite>&gt;_</li>
+</ul>
+</div>
+</div>
+<div class="section" id="related-tools">
+<h2><a class="toc-backref" href="#id30">3.5&nbsp;&nbsp;&nbsp;Related Tools</a></h2>
+<div class="section" id="pdf">
+<h3><a class="toc-backref" href="#id31">3.5.1&nbsp;&nbsp;&nbsp;pdf</a></h3>
+<p><a class="reference external" href="https://github.com/rst2pdf/rst2pdf">https://github.com/rst2pdf/rst2pdf</a>
+<a class="reference external" href="https://github.com/rst2pdf/rst2pdf.github.io">https://github.com/rst2pdf/rst2pdf.github.io</a>
+<a class="reference external" href="https://rst2pdf.org/">https://rst2pdf.org/</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h1><a class="toc-backref" href="#id32">4&nbsp;&nbsp;&nbsp;نوشتن فارسی</a></h1>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id33">4.1&nbsp;&nbsp;&nbsp;فارسی</a></h2>
+<div class="section" id="test-sub">
+<h3><a class="toc-backref" href="#id34">4.1.1&nbsp;&nbsp;&nbsp;test sub</a></h3>
+<p class="ltr">&quot;default.css&quot; is my CSS but html4css1.css is the default css of rst2html (or sphinx)s</p>
+<pre class="code console literal-block">
+<span class="generic output">rst2html final.932.txt final.932.txt.html --stylesheet=default.css,html4css1.css
+rst2html.py reStructuredText.txt reStructuredText.html  --stylesheet=default.css,html4css1.css</span>
+</pre>
+<p>This is a simple sentence.</p>
+<p class="rtl">نوشتن فارسی
+به فارسی ادامه
+می‌دهیم
+زبان فارسی</p>
+<p class="ltr"><a class="reference external" href="http://docutils.sourceforge.net/FAQ.html#can-i-produce-documents-in-right-to-left-languages">Right To Left</a></p>
+<hr class="docutils" />
+<p>For install, see <a class="reference external" href="ابنمتنارجاعیاستکهدیدیم">my-reference-label</a>.</p>
+<p>How can I sure this name a_b_c will work correctly.</p>
+<p>Git <a class="reference external" href="scm/git/git.html#configuraton">configuration</a></p>
+<hr class="docutils" />
+<div class="formula">
+<i>n</i><sub><span class="mathrm">offset</span></sub> = <span class="limits"><sup class="limit"><i>N</i> − 1</sup><span class="limit">⎲</span><span class="limit">⎳</span><sub class="limit"><i>k</i> = 0</sub></span><i>s</i><sub><i>k</i></sub><i>n</i><sub><i>k</i></sub>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="21%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Header row, column 1
+(header rows optional)</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+<th class="head">Header 4</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>body row 1, column 1</td>
+<td>column 2</td>
+<td>column 3</td>
+<td>column 4</td>
+</tr>
+<tr><td>body row 2</td>
+<td colspan="3">Cells may span columns.</td>
+</tr>
+<tr><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td colspan="2" rowspan="2"><ul class="first last simple">
+<li>Table cells</li>
+<li>contain</li>
+<li>body elements.</li>
+</ul>
+</td>
+</tr>
+<tr><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">A grid table</th>
+</tr>
+<tr><th class="head">Col 1</th>
+<th class="head">Col 2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils">
+<caption>Truth table for &quot;not&quot;</caption>
+<thead valign="bottom">
+<tr><th class="head">A</th>
+<th class="head">not A</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>False</td>
+<td>True</td>
+</tr>
+<tr><td>True</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<caption>Frozen Delights!</caption>
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Treat</th>
+<th class="head">Quantity</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Albatross</td>
+<td>2.99</td>
+<td>On a stick!</td>
+</tr>
+<tr><td>Crunchy Frog</td>
+<td>1.49</td>
+<td>If we took the bones out, it wouldn't be
+crunchy, now would it?</td>
+</tr>
+<tr><td>Gannet Ripple</td>
+<td>133.99</td>
+<td>On a stick!</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given docutils">
+<caption>Frozen Delights!</caption>
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Treat</th>
+<th class="head">Quantity</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Albatross</td>
+<td>2.99</td>
+<td>On a stick!</td>
+</tr>
+<tr><td>Crunchy Frog</td>
+<td>1.49</td>
+<td>If we took the bones out, it wouldn't be
+crunchy, now would it?</td>
+</tr>
+<tr><td>Gannet Ripple</td>
+<td>1.99</td>
+<td>On a stick!</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-given tableheaderwithgraybackground docutils">
+<caption>فهرست کارهای انجام شده برای پشتیبانی</caption>
+<colgroup>
+<col width="20%" />
+<col width="40%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">تاریخ</th>
+<th class="head">مشکل</th>
+<th class="head">توضیح</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>۱۳۹۹/۷/۶</td>
+<td>اعمال داده هاي جديد كاليبراسيون مخازن در نرم افزار کنترل تولید</td>
+<td>داده های جدید اعمال گردیده و در نرم افزار در حال استفاده می‌باشد</td>
+</tr>
+<tr><td>۱۳۹۹/۸/۳</td>
+<td>رفع اشكال از گزارش توليد روزانه در نرم افزار كنترل توليد</td>
+<td>پس از تغییرات کلی در گزارش دیگر درست شد.</td>
+</tr>
+<tr><td>۱۳۹۹/۸/۲۹</td>
+<td>خوانده نشدن داده‌های DCS</td>
+<td>مشکل بررسی و برطرف شد</td>
+</tr>
+<tr><td>۱۳۹۹/۹/۷</td>
+<td>خوانده نشدن داده‌های DCS</td>
+<td>مشکل بررسی و برطرف شد</td>
+</tr>
+<tr><td>۱۳۹۹/۹/۱۴</td>
+<td>خوانده نشدن داده‌های DCS</td>
+<td>مشکل بررسی و برطرف شد</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="nested-list">
+<h2><a class="toc-backref" href="#id35">4.2&nbsp;&nbsp;&nbsp;nested list</a></h2>
+<p><a class="reference external" href="http://stackoverflow.com/questions/5550089/how-to-create-a-nested-list-in-restructuredtext">http://stackoverflow.com/questions/5550089/how-to-create-a-nested-list-in-restructuredtext</a></p>
+<p>Make sure the nested list is indented to the same level as the text of the parent list, like this:</p>
+<ol class="arabic simple">
+<li>جایگزینی internal_work_order_statement (انجام شد ولی باید work_order_tag_list_id نیز در جاهای مختلف حذف شود)</li>
+<li>معین کردن state مربوط به work_order_state و کلیه state ها</li>
+<li>باید صفر تا صد تمامی کارها state بندی شده و دستورات insert مربوطه را بنویسیم</li>
+<li>جدولهای پایه که باید پر کنیم تا روال کار را در نرم افزار مدیریت نمائیم:<ol class="loweralpha">
+<li>proposed_work_request_base_state</li>
+<li>pm_base_type</li>
+<li>work_request_base_state</li>
+<li>work_request_base_type</li>
+<li>work_order_base_type</li>
+<li>work_order_state_base_state</li>
+<li>alarm_base_type (هنوز جدول درست نشده است)</li>
+<li>log_action (کار آینده)</li>
+<li>جدولهای پایه که باید اجازه بدهیم کاربر data entry نماید</li>
+<li>activity_fault_base_list</li>
+<li>activity_fault_reason_base_list</li>
+<li>activity_action_base_list</li>
+</ol>
+</li>
+<li>روی انتقال از PM به work_request نیز بهتر است بصورت جدولی کار کنیم</li>
+<li>بر روی این تمرکز شود که تمامی انتقالها از طریق یک جدول انجام شود (بعضی از این موارد از طریق فیلدی درون
+یک جدول و بعضی از طریق یک state از یک جدول تعریف شده اند (مواردی چون work_request_generated را حذف نمائیم))</li>
+<li>معین کردن alarm مربوط به کلیه state ها و کلیه flow ها از جمله درخواست کار، حکم کار، pm و ...</li>
+<li>حق دسترسی ها را نیز باید مد نظر داشته باشیم</li>
+</ol>
+<p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#hyperlink-targets">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#hyperlink-targets</a></p>
+<p>Anonymous Hyperlinks</p>
+<p>The World Wide Web Consortium recommends in its HTML Techniques for Web Content Accessibility Guidelines that authors should &quot;clearly identify the target of each link.&quot; Hyperlink references should be as verbose as possible, but duplicating a verbose hyperlink name in the target is onerous and error-prone. Anonymous hyperlinks are designed to allow convenient verbose hyperlink references, and are analogous to Auto-Numbered Footnotes. They are particularly useful in short or one-off documents. However, this feature is easily abused and can result in unreadable plaintext and/or unmaintainable documents. Caution is advised.</p>
+<p>Anonymous hyperlink references are specified with two underscores instead of one:</p>
+<p>See <a class="reference external" href="http://www.python.org">the web site of my favorite programming language</a> .</p>
+<p>Anonymous targets begin with &quot;.. __:&quot;; no reference name is required or allowed:</p>
+<p>As a convenient alternative, anonymous targets may begin with &quot;__&quot; only:</p>
+<blockquote>
+&quot;__ <a class="reference external" href="http://www.learnpython.org/">http://www.learnpython.org/</a>&quot;</blockquote>
+<p>The reference name of the reference is not used to match the reference to its target. Instead, the order of anonymous hyperlink references and targets within the document is significant: the first anonymous reference will link to the first anonymous target. The number of anonymous hyperlink references in a document must match the number of anonymous targets. For readability, it is recommended that targets be kept close to references. Take care when editing text containing anonymous references; adding, removing, and rearranging references require attention to the order of corresponding targets.</p>
+<p>The followin lines have error if I put space after  &gt;  and before  `</p>
+<ul class="simple">
+<li>Prepare paper for Izadi work on database
+<a class="reference external" href="http://www.sciencedirect.com/science/journal/14778424">Computer Languages, Systems &amp; Structures</a></li>
+<li>Prepare article in nano in the following journals :</li>
+<li>next Item</li>
+</ul>
+<p>So we must delete extra space at the end of a link</p>
+<p>The error happens because the rst format seems to require a line of spacing before and after a bulleted list. The following input parses and produces the same input for both implementations:</p>
+<p><a class="reference external" href="https://github.com/nim-lang/Nim/issues/689">https://github.com/nim-lang/Nim/issues/689</a></p>
+<ul class="simple">
+<li>One<ul>
+<li>A</li>
+<li><a class="reference external" href="http://foo">Some split hyperlink</a></li>
+<li>B</li>
+</ul>
+</li>
+<li>Two<ul>
+<li>A</li>
+<li>B</li>
+</ul>
+</li>
+</ul>
+<p>Not sure if Nimrod should report this, but the error of the python version also confused github's ruby rendering engine. Maybe nimrod should get a --strict switch to catch these?</p>
+<p>I found this method working</p>
+<p>First, you have the role.</p>
+<p>An example of using <span class="red">interpreted text</span></p>
+<p>It translates into as follows.</p>
+<p>&lt;p&gt;An example of using &lt;span class=&quot;red&quot;&gt;interpreted text&lt;/span&gt;&lt;/p&gt;</p>
+<p>Now, you have the red class, you can use CSS for changing colors.</p>
+<!-- comment:
+
+.red {
+    color:red;
+} -->
+<p><a class="reference external" href="http://stackoverflow.com/questions/4669689/how-to-use-color-in-text-with-restructured-text-rst2html-py-or-how-to-insert-h/4669850#4669850">How to use color in text with ReStructured Text (rst2html.py) or how to insert HTML tags without blank lines?</a></p>
+<table border="1" class="ltr align center docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">sno</th>
+<th class="head">pno</th>
+<th class="head">qty</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>S1</td>
+<td>P1</td>
+<td>300</td>
+</tr>
+<tr><td>S1</td>
+<td>P2</td>
+<td>200</td>
+</tr>
+<tr><td>S1</td>
+<td>P3</td>
+<td>400</td>
+</tr>
+<tr><td>S1</td>
+<td>P4</td>
+<td>200</td>
+</tr>
+<tr><td>S1</td>
+<td>P5</td>
+<td>100</td>
+</tr>
+<tr><td>S1</td>
+<td>P6</td>
+<td>100</td>
+</tr>
+<tr><td>S2</td>
+<td>P1</td>
+<td>300</td>
+</tr>
+<tr><td>S2</td>
+<td>P2</td>
+<td>400</td>
+</tr>
+<tr><td>S3</td>
+<td>P2</td>
+<td>200</td>
+</tr>
+<tr><td>S4</td>
+<td>P2</td>
+<td>200</td>
+</tr>
+<tr><td>S4</td>
+<td>P4</td>
+<td>300</td>
+</tr>
+<tr><td>S4</td>
+<td>P5</td>
+<td>400</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="ltr docutils">
+<caption>بخش selector از قطعه بندی</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><cite>segment number</cite></th>
+<th class="head"><cite>GDT or LDT</cite></th>
+<th class="head"><cite>protection</cite></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>13</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<caption>جدول فاکتور - خریدار</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head"><a class="reference external" href="#">شماره فاکتور فروش</a></th>
+<th class="head"><a class="reference external" href="#">نام خریدار</a></th>
+<th class="head">نشانی خریدار</th>
+<th class="head">دیگر اطلاعات خریدار</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>1</td>
+<td>Ali</td>
+<td>Street1</td>
+<td>other</td>
+</tr>
+<tr><td>4</td>
+<td>Kamran</td>
+<td>street2</td>
+<td>other</td>
+</tr>
+<tr><td>5</td>
+<td>Hamid</td>
+<td>street3</td>
+<td>other</td>
+</tr>
+<tr><td>2</td>
+<td>Koroush</td>
+<td>street1</td>
+<td>other</td>
+</tr>
+<tr><td>4</td>
+<td>Kamran</td>
+<td>street2</td>
+<td>other</td>
+</tr>
+<tr><td>5</td>
+<td>Hamid</td>
+<td>street3</td>
+<td>other</td>
+</tr>
+<tr><td>3</td>
+<td>Reza</td>
+<td>street2</td>
+<td>other</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>t<sub>t</sub> : زمان دسترسی به حافظه‌ی نهان جدول صفحه</li>
+<li>t<sub>c</sub> : زمان دسترستی به حافظه‌ی نهان</li>
+<li>t<sub>m</sub> : زمان دسترسی به حافظه‌ی اصلی</li>
+<li>h<sub>T</sub> : ضریب اصابت به حافظه‌ی نهان جدول صفحه</li>
+<li>h<sub>c</sub> : ضریب اصابت به حافظه‌ی نهان</li>
+</ul>
+<div class="ltr formula">
+<i>EAT</i> = <i>table</i> + <i>memory</i>
+</div>
+<div class="ltr formula">
+<i>table</i> = <i>h</i><sub><i>t</i></sub>*<i>t</i><sub><i>t</i></sub> + (1 − <i>h</i><sub><i>t</i></sub>)*(<i>t</i><sub><i>t</i></sub> + <i>t</i><sub><i>m</i></sub>)
+</div>
+<div class="ltr formula">
+<i>memory</i> = <i>h</i><sub><i>c</i></sub>*<i>t</i><sub><i>c</i></sub> + (1 − <i>h</i><sub><i>c</i></sub>)*(<i>t</i><sub><i>m</i></sub> + <i>t</i><sub><i>c</i></sub>)
+</div>
+<p>با فرض برابر بودن نسبت‌های اصابت و زمان‌های یکسان برای دسترسی به حافظهٔ نهان  و حافظهٔ TLB خواهیم داشت</p>
+<div class="ltr formula">
+<i>EAT</i> = 2*(<i>h</i>*<i>t</i><sub><i>c</i></sub> + (1 − <i>h</i>)*(<i>t</i><sub><i>c</i></sub> + <i>t</i><sub><i>m</i></sub>))
+</div>
+<div class="ltr docutils container">
+<p>left to right text in a container</p>
+<img alt="alternate text" class="align-right" src="picture.jpeg" style="width: 100.0px; height: 50.0px;" />
+<div class="figure">
+<img alt="map to buried treasure" src="picture.png" />
+<p class="caption">This is the caption of the figure (a simple paragraph).</p>
+<div class="legend">
+<p>The legend consists of all elements after the caption.  In this
+case, the legend consists of this paragraph and the following
+table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Symbol</th>
+<th class="head">Meaning</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><img alt="tent.png" class="first last" src="tent.png" />
+</td>
+<td>Campground</td>
+</tr>
+<tr><td><img alt="waves.png" class="first last" src="waves.png" />
+</td>
+<td>Lake</td>
+</tr>
+<tr><td><img alt="peak.png" class="first last" src="peak.png" />
+</td>
+<td>Mountain</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<table border="1" class="colwidths-given ltr docutils">
+<caption>SJF (SPN)</caption>
+<colgroup>
+<col width="8%" />
+<col width="20%" />
+<col width="16%" />
+<col width="24%" />
+<col width="28%" />
+<col width="4%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">&nbsp;&nbsp;P1</th>
+<th class="head">&nbsp;&nbsp;P2</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P4</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P3</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P2</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>0</td>
+<td>2</td>
+<td>7</td>
+<td>11</td>
+<td>17</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<div class="ltr formula">
+<i>Average</i><i>Waiting</i><i>Time</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2 + 0 + (7 − 2) + (11 − 4) + (7 − 5)</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2 + 15 + 7 + 2</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">26</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = 5.2
+</div>
+<table border="1" class="colwidths-given ltr docutils">
+<caption>SRT</caption>
+<colgroup>
+<col width="8%" />
+<col width="20%" />
+<col width="16%" />
+<col width="24%" />
+<col width="28%" />
+<col width="4%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">&nbsp;&nbsp;P1</th>
+<th class="head">&nbsp;&nbsp;P2</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P4</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P3</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P2</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>0</td>
+<td>2</td>
+<td>7</td>
+<td>11</td>
+<td>17</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<div class="ltr formula">
+<i>Average</i><i>Waiting</i><i>Time</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2 + 0 + (7 − 2) + (11 − 4) + (7 − 5)</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2 + 15 + 7 + 2</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">26</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = 5.2
+</div>
+<table border="1" class="colwidths-given ltr docutils">
+<caption>HRRN</caption>
+<colgroup>
+<col width="8%" />
+<col width="20%" />
+<col width="28%" />
+<col width="16%" />
+<col width="24%" />
+<col width="4%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">&nbsp;&nbsp;P1</th>
+<th class="head">&nbsp;&nbsp;P0</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P2</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P4</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P3</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>0</td>
+<td>2</td>
+<td>7</td>
+<td>14</td>
+<td>18</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<div class="ltr formula">
+<i>Average</i><i>Waiting</i><i>Time</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">2 + 0 + (7 − 2) + (18 − 4) + (14 − 5)</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">30</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = 6
+</div>
+<table border="1" class="colwidths-given ltr docutils">
+<caption>Absolute Priority</caption>
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="24%" />
+<col width="20%" />
+<col width="12%" />
+<col width="8%" />
+<col width="16%" />
+<col width="4%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">&nbsp;&nbsp;P0</th>
+<th class="head">&nbsp;&nbsp;P2</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P3</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P2</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P0</th>
+<th class="head">&nbsp;&nbsp;P1</th>
+<th class="head">&nbsp;&nbsp;P4</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>0</td>
+<td>2</td>
+<td>4</td>
+<td>10</td>
+<td>15</td>
+<td>18</td>
+<td>20</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<div class="ltr formula">
+<i>Average</i><i>Waiting</i><i>Time</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">15 + 18 + (10 − 2) + 0 + (20 − 5)</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">56</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span>
+</div>
+<table border="1" class="colwidths-given ltr docutils">
+<caption>Relative Priority</caption>
+<colgroup>
+<col width="20%" />
+<col width="24%" />
+<col width="28%" />
+<col width="8%" />
+<col width="16%" />
+<col width="4%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">&nbsp;&nbsp;P0</th>
+<th class="head">&nbsp;&nbsp;P3</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P2</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P1</th>
+<th class="head">&nbsp;&nbsp;&nbsp;P4</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>0</td>
+<td>5</td>
+<td>11</td>
+<td>18</td>
+<td>20</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<div class="ltr formula">
+<i>Average</i><i>Waiting</i><i>Time</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">0 + 18 + (11 − 2) + (5 − 4) + (20 − 5)</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">43</span><span class="ignored">)/(</span><span class="denominator">5</span><span class="ignored">)</span></span>
+</div>
+<table border="1" class="ltr docutils">
+<colgroup>
+<col width="25%" />
+<col width="42%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">P0</th>
+<th class="head">P1&nbsp;&nbsp;&nbsp;</th>
+<th class="head" colspan="2">P2</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>0</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><img alt="producer" src="../../../../tools/kashanu.png" /></td>
+<td><img alt="consumer" src="../../../../tools/kashanu.png" /></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#role">http://docutils.sourceforge.net/docs/ref/rst/directives.html#role</a></p>
+<div class="ltr docutils container">
+<p>test <code>import os; int(2)</code> test2</p>
+<p>test <code class="python"><span class="keyword namespace">import</span> <span class="name namespace">os</span><span class="punctuation">;</span></code> test2</p>
+<p>using cpp <code class="cpp"><span class="keyword type">int</span> <span class="name">i</span><span class="operator">=</span><span class="literal number integer">1</span><span class="punctuation">;</span></code> next sentence.</p>
+</div>
+<p>next</p>
+<ul class="ltr simple">
+<li><a class="reference external" href="https://raw.githubusercontent.com/scipy-lectures/scipy-lecture-notes/master/intro/numpy/array_object.rst">https://raw.githubusercontent.com/scipy-lectures/scipy-lecture-notes/master/intro/numpy/array_object.rst</a></li>
+<li><a class="reference external" href="https://github.com/scipy-lectures/scipy-lecture-notes/blob/master/intro/numpy/array_object.rst">https://github.com/scipy-lectures/scipy-lecture-notes/blob/master/intro/numpy/array_object.rst</a></li>
+</ul>
+<div class="ltr docutils container">
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Complex:</th><td class="field-body"><pre class="code pycon first literal-block">
+<span class="name"></span><span class="generic prompt">&gt;&gt;&gt; </span><span class="name">d</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">array</span><span class="punctuation">([</span><span class="literal number integer">1</span><span class="operator">+</span><span class="literal number integer">2j</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="operator">+</span><span class="literal number integer">4j</span><span class="punctuation">,</span> <span class="literal number integer">5</span><span class="operator">+</span><span class="literal number integer">6</span><span class="operator">*</span><span class="literal number integer">1j</span><span class="punctuation">])</span>
+<span class="generic prompt">&gt;&gt;&gt; </span><span class="name">d</span><span class="operator">.</span><span class="name">dtype</span>
+<span class="generic output">dtype('complex128')</span>
+</pre>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Bool:</th><td class="field-body"><pre class="code pycon first literal-block">
+<span class="name"></span><span class="generic prompt">&gt;&gt;&gt; </span><span class="name">e</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">array</span><span class="punctuation">([</span><span class="name builtin pseudo">True</span><span class="punctuation">,</span> <span class="name builtin pseudo">False</span><span class="punctuation">,</span> <span class="name builtin pseudo">False</span><span class="punctuation">,</span> <span class="name builtin pseudo">True</span><span class="punctuation">])</span>
+<span class="generic prompt">&gt;&gt;&gt; </span><span class="name">e</span><span class="operator">.</span><span class="name">dtype</span>
+<span class="generic output">dtype('bool')</span>
+</pre>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Strings:</th><td class="field-body"><pre class="code pycon first literal-block">
+<span class="name"></span><span class="generic prompt">&gt;&gt;&gt; </span><span class="name">f</span> <span class="operator">=</span> <span class="name">np</span><span class="operator">.</span><span class="name">array</span><span class="punctuation">([</span><span class="literal string single">'Bonjour'</span><span class="punctuation">,</span> <span class="literal string single">'Hello'</span><span class="punctuation">,</span> <span class="literal string single">'Hallo'</span><span class="punctuation">,])</span>
+<span class="generic prompt">&gt;&gt;&gt; </span><span class="name">f</span><span class="operator">.</span><span class="name">dtype</span>     <span class="comment single"># &lt;--- strings containing max. 7 letters  # doctest: +SKIP</span>
+<span class="generic output">dtype('S7')</span>
+</pre>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Much more:</th><td class="field-body"><ul class="first last simple">
+<li><tt class="docutils literal">int32</tt></li>
+<li><tt class="docutils literal">int64</tt></li>
+<li><tt class="docutils literal">uint32</tt></li>
+<li><tt class="docutils literal">uint64</tt></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://docutils.readthedocs.io/en/sphinx-docs/user/tools.html">https://docutils.readthedocs.io/en/sphinx-docs/user/tools.html</a></p>
+<p>Now open the “test.html” file in your favorite browser to see the results. To get a footer with a link to the source file, date &amp; time of processing, and links to the Docutils project, add some options:</p>
+<p>rst2html.py -stg test.txt test.html</p>
+</div>
+<table class="docutils citation" frame="void" id="cit2002" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[CIT2002]</a></td><td>A citation
+(as به این شکل می‌توانیم متن ارجاع را بنویسیم often used in journals).</td></tr>
+</tbody>
+</table>
+<!-- comments:
+
+rst2html reStructuredText.rst reStructuredText.html - -stylesheet=farsi.css,html4css1.css
+rst2html reStructuredText.rst reStructuredText.html - -stylesheet=farsi.css,html4css1.css -stg
+
+
+.. toctree::
+   :caption: Table of Contents
+   :name: mastertoc
+
+    file1
+    file2
+
+.. literalinclude:: filename
+    :linenos:
+    :language: python
+    :lines: 1, 3-5
+    :start-after: 3
+    :end-before: 5 -->
+<p>Make sure the nested list is indented to the same level as the text of the parent list (or three characters, whichever is greater), like this:</p>
+<ol class="arabic simple">
+<li>X<ol class="loweralpha">
+<li>U</li>
+<li>V</li>
+<li>W</li>
+</ol>
+</li>
+<li>Y</li>
+<li>Z</li>
+</ol>
+</div>
+</div>
+</div>
+</body>
+</html>
