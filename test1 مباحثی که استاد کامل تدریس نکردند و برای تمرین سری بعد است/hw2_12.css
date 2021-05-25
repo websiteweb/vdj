@@ -1,0 +1,23 @@
+div#ps-desc-i-id {
+  display: grid;
+  grid-template-areas:
+    'h1 h1 h1 h1'
+    'shdesc shdesc shdesc shdesc'
+    'shcode shcode shcode shcode'
+    'p0desc p0desc p1desc p1desc'
+    'p0code p0code p1code p1code'
+    'out10 out12 out14 out16'
+    ;
+}
+div#ps-desc-i-id > h1:nth-of-type(1){ grid-area: h1;}
+div#ps-desc-i-id > p:nth-of-type(1){ grid-area: shdesc;}
+div#ps-desc-i-id > pre:nth-of-type(1){ grid-area: shcode;}
+div#ps-desc-i-id > p:nth-of-type(2){ grid-area: p0desc;}
+div#ps-desc-i-id > p:nth-of-type(3){ grid-area: p1desc;}
+div#ps-desc-i-id > pre:nth-of-type(2){ grid-area: p0code;}
+div#ps-desc-i-id > pre:nth-of-type(3){ grid-area: p1code;}
+div#ps-desc-i-id > ol:nth-of-type(1){ grid-area: out10; background-color: #BEF648; }
+div#ps-desc-i-id > ol:nth-of-type(2){ grid-area: out12; background-color: #BEF648;}
+div#ps-desc-i-id > ol:nth-of-type(3){ grid-area: out14; background-color: #EE9898;}
+div#ps-desc-i-id > ol:nth-of-type(4){ grid-area: out16; background-color: #EE9898;}
+

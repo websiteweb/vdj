@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>2آزمایشی</title>
+	<style type="text/css">
+		div#ps-desc-i-id {
+			display: grid;
+			grid-template-areas:
+				'h1 h1 h1 h1'
+				'shdesc shdesc shdesc shdesc'
+				'shcode shcode shcode shcode'
+				'p0desc p0desc p1desc p1desc'
+				'p0code p0code p1code p1code'
+				'out10 out12 out14 out16'
+			;
+		}
+
+		div#ps-desc-i-id>h1:nth-of-type(1) {
+			grid-area: h1;
+		}
+
+		div#ps-desc-i-id>p:nth-of-type(1) {
+			grid-area: shdesc;
+		}
+
+		div#ps-desc-i-id>pre:nth-of-type(1) {
+			grid-area: shcode;
+		}
+
+		div#ps-desc-i-id>p:nth-of-type(2) {
+			grid-area: p0desc;
+		}
+
+		div#ps-desc-i-id>p:nth-of-type(3) {
+			grid-area: p1desc;
+		}
+
+		div#ps-desc-i-id>pre:nth-of-type(2) {
+			grid-area: p0code;
+		}
+
+		div#ps-desc-i-id>pre:nth-of-type(3) {
+			grid-area: p1code;
+		}
+
+		div#ps-desc-i-id>ol:nth-of-type(1) {
+			grid-area: out10;
+			background-color: #BEF648;
+		}
+
+		div#ps-desc-i-id>ol:nth-of-type(2) {
+			grid-area: out12;
+			background-color: #BEF648;
+		}
+
+		div#ps-desc-i-id>ol:nth-of-type(3) {
+			grid-area: out14;
+			background-color: #EE9898;
+		}
+
+		div#ps-desc-i-id>ol:nth-of-type(4) {
+			grid-area: out16;
+			background-color: #EE9898;
+		}
+	</style>
+	<style type="text/css">
+		/*
+*   math2html: convert LaTeX equations to HTML output.
+*
+*   Copyright (C) 2009,2010 Alex Fernández
+*
+*   Released under the terms of the `2-Clause BSD license'_, in short:
+*   Copying and distribution of this file, with or without modification,
+*   are permitted in any medium without royalty provided the copyright
+*   notice and this notice are preserved.
+*   This file is offered as-is, without any warranty.
+*
+* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
+*
+*   Based on eLyXer: convert LyX source files to HTML output.
+*   http://elyxer.nongnu.org/
+*/
+		/* --end--
+* CSS file for LaTeX formulas.
+*/
+
+		/* Formulas */
+		.formula {
+			text-align: center;
+			font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+			margin: 1.2em 0;
+		}
+
+		span.formula {
+			white-space: nowrap;
+		}
+
+		div.formula {
+			padding: 0.5ex;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		/* Basic features */
+		a.eqnumber {
+			display: inline-block;
+			float: right;
+			clear: right;
+			font-weight: bold;
+		}
+
+		span.unknown {
+			color: #800000;
+		}
+
+		span.ignored,
+		span.arraydef {
+			display: none;
+		}
+
+		.formula i {
+			letter-spacing: 0.1ex;
+		}
+
+		/* Alignment */
+		.align-left,
+		.align-l {
+			text-align: left;
+		}
+
+		.align-right,
+		.align-r {
+			text-align: right;
+		}
+
+		.align-center,
+		.align-c {
+			text-align: center;
+		}
+
+		/* Structures */
+		span.overline,
+		span.bar {
+			text-decoration: overline;
+		}
+
+		.fraction,
+		.fullfraction {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+		}
+
+		.fraction .fraction {
+			font-size: 80%;
+			line-height: 100%;
+		}
+
+		span.numerator {
+			display: block;
+		}
+
+		span.denominator {
+			display: block;
+			padding: 0ex;
+			border-top: thin solid;
+		}
+
+		sup.numerator,
+		sup.unit {
+			font-size: 70%;
+			vertical-align: 80%;
+		}
+
+		sub.denominator,
+		sub.unit {
+			font-size: 70%;
+			vertical-align: -20%;
+		}
+
+		span.sqrt {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0.1ex;
+		}
+
+		sup.root {
+			font-size: 70%;
+			position: relative;
+			left: 1.4ex;
+		}
+
+		span.radical {
+			display: inline-block;
+			padding: 0ex;
+			font-size: 150%;
+			vertical-align: top;
+		}
+
+		span.root {
+			display: inline-block;
+			border-top: thin solid;
+			padding: 0ex;
+			vertical-align: middle;
+		}
+
+		span.symbol {
+			line-height: 125%;
+			font-size: 125%;
+		}
+
+		span.bigsymbol {
+			line-height: 150%;
+			font-size: 150%;
+		}
+
+		span.largesymbol {
+			font-size: 175%;
+		}
+
+		span.hugesymbol {
+			font-size: 200%;
+		}
+
+		span.scripts {
+			display: inline-table;
+			vertical-align: middle;
+		}
+
+		.script {
+			display: table-row;
+			text-align: left;
+			line-height: 150%;
+		}
+
+		span.limits {
+			display: inline-table;
+			vertical-align: middle;
+		}
+
+		.limit {
+			display: table-row;
+			line-height: 99%;
+		}
+
+		sup.limit,
+		sub.limit {
+			line-height: 100%;
+		}
+
+		span.symbolover {
+			display: inline-block;
+			text-align: center;
+			position: relative;
+			float: right;
+			right: 100%;
+			bottom: 0.5em;
+			width: 0px;
+		}
+
+		span.withsymbol {
+			display: inline-block;
+		}
+
+		span.symbolunder {
+			display: inline-block;
+			text-align: center;
+			position: relative;
+			float: right;
+			right: 80%;
+			top: 0.3em;
+			width: 0px;
+		}
+
+		/* Environments */
+		span.array,
+		span.bracketcases,
+		span.binomial,
+		span.environment {
+			display: inline-table;
+			text-align: center;
+			border-collapse: collapse;
+			margin: 0em;
+			vertical-align: middle;
+		}
+
+		span.arrayrow,
+		span.binomrow {
+			display: table-row;
+			padding: 0ex;
+			border: 0ex;
+		}
+
+		span.arraycell,
+		span.bracket,
+		span.case,
+		span.binomcell,
+		span.environmentcell {
+			display: table-cell;
+			padding: 0ex 0.2ex;
+			line-height: 99%;
+			border: 0ex;
+		}
+
+		/*
+* CSS file for LaTeX formulas, extra stuff:
+* binomials, vertical braces, stackrel, fonts and colors.
+*/
+
+		/* Inline binomials */
+		span.binom {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			font-size: 80%;
+		}
+
+		span.binomstack {
+			display: block;
+			padding: 0em;
+		}
+
+		/* Over- and underbraces */
+		span.overbrace {
+			border-top: 2pt solid;
+		}
+
+		span.underbrace {
+			border-bottom: 2pt solid;
+		}
+
+		/* Stackrel */
+		span.stackrel {
+			display: inline-block;
+			text-align: center;
+		}
+
+		span.upstackrel {
+			display: block;
+			padding: 0em;
+			font-size: 80%;
+			line-height: 64%;
+			position: relative;
+			top: 0.15em;
+
+		}
+
+		span.downstackrel {
+			display: block;
+			vertical-align: bottom;
+			padding: 0em;
+		}
+
+		/* Fonts */
+		span.mathsf,
+		span.textsf {
+			font-style: normal;
+			font-family: sans-serif;
+		}
+
+		span.mathrm,
+		span.textrm {
+			font-style: normal;
+			font-family: serif;
+		}
+
+		span.text,
+		span.textnormal {
+			font-style: normal;
+		}
+
+		span.textipa {
+			color: #008080;
+		}
+
+		span.fraktur {
+			font-family: "Lucida Blackletter", eufm10, blackletter;
+		}
+
+		span.blackboard {
+			font-family: Blackboard, msbm10, serif;
+		}
+
+		span.scriptfont {
+			font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+			font-style: italic;
+		}
+
+		/* Colors */
+		span.colorbox {
+			display: inline-block;
+			padding: 5px;
+		}
+
+		span.fbox {
+			display: inline-block;
+			border: thin solid black;
+			padding: 2px;
+		}
+
+		span.boxed,
+		span.framebox {
+			display: inline-block;
+			border: thin solid black;
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="document">
+
+		<table class="docinfo" frame="void" rules="none">
+			<col class="docinfo-name" />
+			<col class="docinfo-content" />
+			<tbody valign="top">
+				<tr class="id field">
+					<th class="docinfo-name">id:</th>
+					<td class="field-body">ps-desc-i-id</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="section" id="sharing-simple-variables-i">
+			<h1>Sharing Simple Variables(I)</h1>
+			<p>Share code</p>
+			<pre class="code cpp literal-block">
+<span class="keyword type">double</span> <span class="name">x</span> <span class="operator">=</span> <span class="literal number integer">0</span><span class="punctuation">,</span> <span class="name">y</span> <span class="operator">=</span> <span class="literal number integer">1</span><span class="punctuation">;</span>
+</pre>
+			<p><span class="formula"><i>p</i><sub>0</sub></span></p>
+			<pre class="code cpp literal-block">
+<span class="ln">1 </span><span class="name">x</span> <span class="operator">=</span> <span class="name">y</span> <span class="operator">+</span> <span class="literal number integer">4</span> <span class="punctuation">;</span>
+<span class="ln">2 </span><span class="name">y</span> <span class="operator">=</span> <span class="name">x</span> <span class="operator">-</span> <span class="literal number integer">2</span> <span class="punctuation">;</span>
+</pre>
+			<p><span class="formula"><i>p</i><sub>1</sub></span></p>
+			<pre class="code cpp literal-block">
+<span class="ln">1 </span><span class="name">x</span> <span class="operator">=</span> <span class="name">y</span> <span class="operator">+</span> <span class="literal number integer">4</span> <span class="punctuation">;</span>
+<span class="ln">2 </span><span class="name">y</span> <span class="operator">=</span> <span class="name">x</span> <span class="operator">-</span> <span class="literal number integer">2</span> <span class="punctuation">;</span>
+</pre>
+			<ol class="substep trace-code arabic simple">
+				<li><span class="formula"><i>P</i><sub>0</sub></span> 1 : x = 5, y = 1</li>
+				<li><span class="formula"><i>P</i><sub>0</sub></span> 2 : x = 5, y = 3</li>
+				<li><span class="formula"><i>P</i><sub>1</sub></span> 1 : x = 7, y = 3</li>
+				<li><span class="formula"><i>P</i><sub>1</sub></span> 2 : x = 7, y = 5</li>
+			</ol>
+			<ol class="substep trace-code arabic simple">
+				<li><span class="formula"><i>P</i><sub>1</sub></span> 1 : x = 5, y = 1</li>
+				<li><span class="formula"><i>P</i><sub>1</sub></span> 2 : x = 5, y = 3</li>
+				<li><span class="formula"><i>P</i><sub>0</sub></span> 1 : x = 7, y = 3</li>
+				<li><span class="formula"><i>P</i><sub>0</sub></span> 2 : x = 7, y = 5</li>
+			</ol>
+			<ol class="substep trace-code arabic simple">
+				<li><span class="formula"><i>P</i><sub>0</sub></span> 1 : x = 5, y = 1</li>
+				<li><span class="formula"><i>P</i><sub>1</sub></span> 1 : x = 5, y = 1</li>
+				<li><span class="formula"><i>P</i><sub>0</sub></span> 2 : x = 5, y = 3</li>
+				<li><span class="formula"><i>P</i><sub>1</sub></span> 2 : x = 5, y = 3</li>
+			</ol>
+			<ol class="substep trace-code arabic simple">
+				<li><span class="formula"><i>P</i><sub>1</sub></span> 1 : x = 5, y = 1</li>
+				<li><span class="formula"><i>P</i><sub>0</sub></span> 1 : x = 5, y = 1</li>
+				<li><span class="formula"><i>P</i><sub>0</sub></span> 2 : x = 5, y = 3</li>
+				<li><span class="formula"><i>P</i><sub>1</sub></span> 2 : x = 5, y = 3</li>
+			</ol>
+		</div>
+	</div>
+</body>
+
+</html>
